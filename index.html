@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8">
+	  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Bruh! Photo Editor Lite</title>
+      <link rel="stylesheet" href="style.css">
+	  <link rel="shortcut icon" href="icons/favicon.png" type="image/x-icon"> 
+   </head>
+   <body>
+      <div class="main">
+         <div class="Tools">
+            <ul>
+               <li>
+                  <i class='bx bxs-brightness-half'></i>
+                  <p class='toolp'>Brightness</p>
+				  <img src='icons/brightness.png' class='imagebr'>
+               </li>
+               <li>
+                  <i class='bx bxs-brush' ></i>
+                  <p class='toolp'>Blur</p>
+				  <img src='icons/blur.png' class='imageblur'>
+               </li>
+               <li>
+                  <i class='bx bxs-collection' ></i>
+                  <p class='toolp'>Greyscale</p>
+				  <img src='icons/greyscale.png' class='image'>
+               </li>
+               <li>
+                  <i class='bx bxs-color-fill' ></i>
+                  <p class='toolp'>Hue Rotate</p>
+				  <img src='icons/hue.png' class='image'>
+               </li>
+               <li>
+                  <i class='bx bxs-magic-wand' ></i>
+                  <p class='toolp'>Saturation</p>
+				  <img src='icons/saturation.png' class='imageex'>
+               </li>
+               <li onclick="Download_btn()">
+                  <i class='bx bx-export' ></i>
+                  <p class='toolp'>Export</p>
+				  <img src='icons/export.png' class='imageexp'>
+               </li>
+            </ul>
+         </div>
+         <div class="content">
+            <p id="logo">Photo Editor</p>
+			<img src='icons/logo.png' class='logom'>
+            <div class="choose_image">
+               <div class="upload_img_box">
+                  <i class='bx bxs-image-add' ></i><br>
+                  <input type="file" name="selectedImage" id="selectedImage" accept="image/jpeg, image/png">
+                  <p id="hint">Choose Image From Computer</p>
+               </div>
+            </div>
+            <canvas id="image_canvas"></canvas>
+            <div class="image_holder">
+               <button id="remove_img_btn"><i class='bx bxs-message-square-x' ></i></button>
+               <img src="" alt="img" id="image">
+            </div>
+            <div class="options">
+               <div class="option">
+                  <input type="range" max="200" min="0" value="100" id="brightness" class="slider">
+                  <p id="brightVal" class="show_value">100</p>
+               </div>
+               <div class="option">
+                  <input type="range" max="50" min="0" value="0" id="blur" class="slider">
+                  <p id="blurVal" class="show_value">0</p>
+               </div>
+               <div class="option">
+                  <input type="range" max="100" min="0" value="0" id="greyScale" class="slider">
+                  <p id="greyVal" class="show_value">0</p>
+               </div>
+               <div class="option">
+                  <input type="range" max="100" min="0" value="0" id="hue" class="slider">
+                  <p id="hueVal" class="show_value">0</p>
+               </div>
+               <div class="option">
+                  <input type="range" max="100" min="1" value="1" id="saturation" class="slider">
+                  <p id="saturationVal" class="show_value">1</p>
+               </div>
+            </div>
+            <button id="clearAll"><span><p class='reset'>Reset</p></span><i class='bx bx-reset' ></i></button>
+         </div>
+      </div>
+      <script src="main.js"></script>
+   </body>
+</html>
